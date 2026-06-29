@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>访客数据看板 · 双系统</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f0f0f;color:#e0e0e0;padding:20px;min-height:100vh}
+h1{font-size:22px;color:#fff;margin-bottom:4px;text-align:center}
+.sub{text-align:center;color:#8e8e93;font-size:12px;margin-bottom:24px}
+.panels{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1400px;margin:0 auto}
+@media(max-width:900px){.panels{grid-template-columns:1fr}}
+.panel{background:#1a1a2e;border-radius:12px;overflow:hidden}
+.panel-head{padding:16px 20px;border-bottom:1px solid #252540;display:flex;justify-content:space-between;align-items:center}
+.panel-title{font-size:16px;font-weight:700;color:#fff}
+.panel-badge{font-size:12px;background:#3B82F6;color:#fff;padding:3px 10px;border-radius:100px}
+.panel-badge.food{background:#F59E0B;color:#000}
+.panel-stats{display:flex;gap:20px;padding:12px 20px;border-bottom:1px solid #222}
+.stat-item{text-align:center}
+.stat-val{font-size:20px;font-weight:700;color:#fff}
+.stat-label{font-size:11px;color:#8e8e93}
+.panel-body{max-height:65vh;overflow-y:auto}
+table{width:100%;border-collapse:collapse}
+th{background:#252540;padding:10px 12px;text-align:left;font-size:12px;color:#aaa;position:sticky;top:0;z-index:1}
+td{padding:9px 12px;font-size:12px;border-bottom:1px solid #1f1f35}
+tr:hover{background:#1f1f3a}
+.city-tag{display:inline-block;padding:2px 8px;background:#252540;border-radius:4px;font-size:11px}
+.empty{text-align:center;color:#555;padding:40px;font-size:13px}
+.footer{text-align:center;color:#555;font-size:11px;margin-top:20px}
+button{display:block;margin:16px auto 0;padding:8px 24px;background:#3B82F6;color:#fff;border:none;border-radius:100px;font-size:13px;cursor:pointer}
+button:hover{background:#2563EB}
+.loading{text-align:center;color:#666;padding:40px;font-size:13px}
+.error{color:#ef4444;text-align:center;padding:40px;font-size:13px}
+</style>
+</head>
+<body>
+<h1>AI 学习助手 + 美食推荐系统 · 访客看板</h1>
+<div class="sub" id="clock"></div>
+<div class="panels">
+  <div class="panel">
+    <div class="panel-head"><span class="panel-title">AI 学习助手</span><span class="panel-badge">ai.foodrs.top</span></div>
+    <div class="panel-stats" id="aiStats"></div>
+    <div class="panel-body" id="aiBody"><div class="loading">加载中...</div></div>
+  </div>
+  <div class="panel">
+    <div class="panel-head"><span class="panel-title">美食推荐系统</span><span class="panel-badge food">foodrs.top</span></div>
+    <div class="panel-stats" id="foodStats"></div>
+    <div class="panel-body" id="foodBody"><div class="loading">加载中...</div></div>
+  </div>
+</div>
+<button onclick="loadAll()">刷新数据</button>
+<div class="footer">每 30 秒自动刷新</div>
+<script>
+function fmtDate(iso) {
+  if (!iso) return '?';
+  var d = new Date(iso);
+  var bj = new Date(d.getTime() + 8*60*60*1000);
+  var pad = function(n) { return String(n).padStart(2,'0'); };
+  return bj.getUTCFullYear()+'-'+pad(bj.getUTCMonth()+1)+'-'+pad(bj.getUTCDate())+' '+pad(bj.getUTCHours())+':'+pad(bj.getUTCMinutes())+':'+pad(bj.getUTCSeconds());
+}
+function updateClock() {
+  var now = new Date();
+  var bj = new Date(now.getTime() + 8*60*60*1000);
+  var pad = function(n) { return String(n).padStart(2,'0'); };
+  document.getElementById('clock').textContent = '北京时间 '+bj.getUTCFullYear()+'-'+pad(bj.getUTCMonth()+1)+'-'+pad(bj.getUTCDate())+' '+pad(bj.getUTCHours())+':'+pad(bj.getUTCMinutes())+':'+pad(bj.getUTCSeconds())+' · 自动刷新';
+}
+function renderPanel(data, bodyId, statsId) {
+  var statsEl = document.getElementById(statsId);
+  var bodyEl = document.getElementById(bodyId);
+  var users = data.users || {};
+  var visits = (data.visits || []).slice().reverse();
+  var userIds = Object.keys(users);
+  var returnCount = 0;
+  userIds.forEach(function(uid) { if (users[uid].visitCount > 1) returnCount++; });
+  statsEl.innerHTML =
+    '<div class="stat-item"><div class="stat-val">'+(data.uniqueUsers||0)+'</div><div class="stat-label">独立访客</div></div>'+
+    '<div class="stat-item"><div class="stat-val">'+visits.length+'</div><div class="stat-label">访问次数</div></div>'+
+    '<div class="stat-item"><div class="stat-val">'+userIds.length+'</div><div class="stat-label">用户数</div></div>'+
+    '<div class="stat-item"><div class="stat-val">'+returnCount+'</div><div class="stat-label">回头客</div></div>';
+  if (visits.length === 0) { bodyEl.innerHTML = '<div class="empty">暂无访客数据</div>'; return; }
+  var rows = visits.map(function(v, i) {
+    var uidShort = (v.userId || '').slice(-10);
+    var city = v.city || '?';
+    return '<tr><td>'+(i+1)+'</td><td>'+fmtDate(v.time)+'</td><td title="'+v.userId+'">'+uidShort+'</td><td>'+(v.device||'?')+'</td><td>'+city+'</td></tr>';
+  }).join('');
+  bodyEl.innerHTML = '<table><thead><tr><th>#</th><th>访问时间（北京）</th><th>用户ID</th><th>设备/浏览器</th><th>城市</th></tr></thead><tbody>'+rows+'</tbody></table>';
+}
+function loadAll() {
+  document.getElementById('aiBody').innerHTML = '<div class="loading">加载中...</div>';
+  document.getElementById('foodBody').innerHTML = '<div class="loading">加载中...</div>';
+  fetch('/api/visitors/data').then(function(r){return r.json()}).then(function(d){renderPanel(d.data,'aiBody','aiStats')}).catch(function(e){document.getElementById('aiBody').innerHTML='<div class="error">加载失败</div>'});
+  fetch('https://foodrs.top/api/visitors/data').then(function(r){return r.json()}).then(function(d){renderPanel(d.data,'foodBody','foodStats')}).catch(function(e){document.getElementById('foodBody').innerHTML='<div class="error">加载失败</div>'});
+}
+updateClock();
+setInterval(updateClock, 1000);
+loadAll();
+setInterval(loadAll, 30000);
+</script>
+</body>
+</html>

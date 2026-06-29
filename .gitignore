@@ -1,0 +1,16 @@
+node_modules/
+.deepseek-key
+*.log
+data/visitors.json*
+data/circle/
+data/certifications.json
+data/suggestions.json
+data/reports/
+data/visitor_backups/
+data/generate.log
+data/task_test.log
+qr.png
+qr.html
+server.js.bak*
+*.tmp
+.DS_Store

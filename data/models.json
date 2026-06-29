@@ -1,0 +1,576 @@
+{
+  "rankings": {
+    "overall": {
+      "title": "总榜"
+    },
+    "coding": {
+      "title": "编程"
+    },
+    "reasoning": {
+      "title": "推理"
+    },
+    "chinese": {
+      "title": "中文"
+    }
+  },
+  "models": [
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5 ⚠️已暂停",
+      "developer": "Anthropic",
+      "type": "商业闭源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 96.5,
+        "coding": 98.2,
+        "reasoning": 95.8,
+        "chinese": 89.5
+      },
+      "trend": "down",
+      "summary": "SWE-bench Verified 95% 的编程之王，因美国出口管制于6月12日被暂停。当前不可用，但代表了已知最强编程能力。",
+      "full_content": "## 模型概述\n\nClaude Fable 5 是 Anthropic 于 2026 年 6 月 9 日发布的超强编程模型。在 SWE-bench Verified 上达到 95.0%，碾压所有竞品。然而仅 3 天后（6月12日），因美国出口管制指令被暂停。\n\n## 核心能力\n\n### 编程 SOTA\nSWE-bench Verified 95.0%，远超第二名。能独立完成复杂的跨文件重构、架构设计和全栈开发。\n\n### 暂停事件\n2026 年 6 月 12 日，美国政府援引出口管制条例要求 Anthropic 暂停 Fable 5 的对外服务。这使其成为首个因地缘政治原因被暂停的 AI 模型。\n\n### 替代方案\n实际可用最强模型为 Claude Opus 4.8（SWE-bench 88.6%），价格 $5/$25 per 1M tokens。\n\n## 价格\n- API: $10/1M input, $50/1M output（已暂停）",
+      "pricing": "$10/$50 per 1M · 已暂停",
+      "url": "https://anthropic.com/claude"
+    },
+    {
+      "id": "claude-opus-48",
+      "name": "Claude Opus 4.8",
+      "developer": "Anthropic",
+      "type": "商业闭源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 95.5,
+        "coding": 94.8,
+        "reasoning": 95.2,
+        "chinese": 88.5
+      },
+      "trend": "up",
+      "summary": "Fable 5 暂停后的实际最强模型。SWE-bench Verified 88.6%，编程与 Agent 能力顶级，是目前生产环境的最佳选择。",
+      "full_content": "## 模型概述\n\nClaude Opus 4.8 是 Anthropic 继 Fable 5 之后的实际旗舰模型。虽不及 Fable 5 的极致编程能力，但在 SWE-bench Verified 上 88.6% 的成绩仍然大幅领先其他可用模型。\n\n## 核心能力\n\n### 编程 SOTA\n在 SWE-bench Verified 达到 88.6%，远超 GPT-5.4 和 Gemini 3.1。支持超长上下文，可处理跨文件的复杂工程任务。\n\n### Agent 模式\n增强的 Plan-Execute-Verify 循环，在复杂多步骤 Agent 任务上可靠性显著提升。Claude Code 深度集成。\n\n### 安全对齐\nConstitutional AI 确保输出安全。在编程场景下持续减少安全漏洞引入率。\n\n## 价格\n- Pro: $18/月（含 Claude Code）\n- Max: $100/月\n- API: $5/1M input, $25/1M output",
+      "pricing": "Pro $18/月 · API $5/1M in, $25/1M out",
+      "url": "https://anthropic.com/claude"
+    },
+    {
+      "id": "gpt-55",
+      "name": "GPT-5.5",
+      "developer": "OpenAI",
+      "type": "商业闭源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 95,
+        "coding": 91.2,
+        "reasoning": 96,
+        "chinese": 87.1
+      },
+      "trend": "up",
+      "summary": "GPT-5.4 的增强版，在推理深度和复杂规划上进一步提升。适合需要深度逻辑分析的场景。",
+      "full_content": "## 模型概述\n\nGPT-5.5 是 OpenAI 推出的 GPT-5.4 增强版本，在复杂推理和长期规划能力上有显著提升。\n\n## 核心能力\n\n### 深度推理\n在需要多步骤逻辑推导和因果分析的任务上表现更强。适合科研、金融建模等场景。\n\n### 长期规划\n改进的规划算法，能处理跨越多天的复杂项目和 Agent 任务。\n\n## 价格\n- API: $5/1M input, $30/1M output",
+      "pricing": "API $5/1M in, $30/1M out",
+      "url": "https://openai.com"
+    },
+    {
+      "id": "gpt-54",
+      "name": "GPT-5.4",
+      "developer": "OpenAI",
+      "type": "商业闭源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 94.8,
+        "coding": 90.5,
+        "reasoning": 95.5,
+        "chinese": 86.2
+      },
+      "trend": "up",
+      "summary": "OpenAI 最新旗舰，SWE-bench Pro 59.1% 登顶标准化榜单。推理和创意能力顶级，多模态统一架构。",
+      "full_content": "## 模型概述\n\nGPT-5.4 是 OpenAI 于 2026 年 6 月发布的最新旗舰模型。在 Scale SEAL 标准化的 SWE-bench Pro 上达到 59.1%，位列所有模型第一。\n\n## 核心能力\n\n### 标准化编码\nSWE-bench Pro 59.1%，经过严格标准化测试的代码能力领先。在需要创意发散和跨领域关联的任务上表现突出。\n\n### 强推理能力\n在 GPQA、MMLU-Pro 等推理基准上持续领先。原生多模态统一处理文本、图像、音频、视频。\n\n### Agent 能力\n内置工具使用、代码执行、网页浏览。通过 Function Calling 编排复杂多步操作。\n\n## 价格\n- Free: 有限额度\n- Pro: $200/月\n- API: $5/1M input, $30/1M output",
+      "pricing": "Pro $200/月 · API $5/1M in, $30/1M out",
+      "url": "https://openai.com"
+    },
+    {
+      "id": "gemini-31-pro",
+      "name": "Gemini 3.1 Pro",
+      "developer": "Google DeepMind",
+      "type": "商业闭源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 93.8,
+        "coding": 90.2,
+        "reasoning": 93.5,
+        "chinese": 83.1
+      },
+      "trend": "up",
+      "summary": "Google 最强大模型，SWE-bench 80.6%，2M 超长上下文 + 原生多模态，Google 生态深度集成。",
+      "full_content": "## 模型概述\n\nGemini 3.1 Pro 是 Google DeepMind 在 2026 年 6 月推出的最新旗舰模型。SWE-bench Verified 80.6%，与 DeepSeek V4 Pro Max 并列开源/闭源混合榜前列。\n\n## 核心能力\n\n### 超长上下文\n2M tokens 上下文窗口，一次性处理数小时视频、整本书籍或超大型代码库。在 Long Context QA 上保持 SOTA。\n\n### 多模态原生\n从底层设计就支持文本、图像、音频、视频的联合理解。视频分析和图表解读能力行业领先。\n\n### Google 生态\n深度集成 Google Workspace、Google Cloud、Android。通过 Vertex AI 企业级部署。Gemini Shield 提供隐私框架。\n\n## 价格\n- Google One AI Premium: $19.99/月\n- API: $2/1M input, $12/1M output",
+      "pricing": "Premium $19.99/月 · API $2/1M in, $12/1M out",
+      "url": "https://deepmind.google"
+    },
+    {
+      "id": "deepseek-v4-pro-max",
+      "name": "DeepSeek V4 Pro Max",
+      "developer": "DeepSeek",
+      "type": "开源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 93.2,
+        "coding": 90.8,
+        "reasoning": 92.5,
+        "chinese": 95.3
+      },
+      "trend": "up",
+      "summary": "开源最强模型，SWE-bench 80.6% 持平 Gemini 3.1 Pro。MIT 协议开源，极低 API 价格，中文 SOTA。",
+      "full_content": "## 模型概述\n\nDeepSeek V4 Pro Max 是 DeepSeek 于 2026 年 6 月发布的万亿参数开源旗舰。在 Stanford HELM 全类别登顶，SWE-bench Verified 80.6% 持平 Gemini 3.1 Pro。\n\n## 核心能力\n\n### 开源最强\nMIT 协议完全开源，权重、代码全公开。在主流基准上全面对标甚至超越闭源旗舰。支持华为昇腾芯片部署。\n\n### 中文 SOTA\n中文理解、生成、文化语境处理行业最高水平。对国内用户的表达习惯和需求理解最到位。\n\n### 极致性价比\nAPI 价格仅为 GPT-5.4 的 1/10，是性价比最高的大模型。Flash 版低至 $0.14/1M tokens。\n\n## 价格\n- 开源免费（自部署）\n- API: $0.44/1M input, $0.87/1M output\n- Flash: $0.14/1M input, $0.28/1M output",
+      "pricing": "开源免费 · API $0.44/1M · Flash $0.14/1M",
+      "url": "https://deepseek.com"
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax M3",
+      "developer": "MiniMax",
+      "type": "开源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 91.5,
+        "coding": 90.1,
+        "reasoning": 90.3,
+        "chinese": 93.8
+      },
+      "trend": "up",
+      "summary": "开源黑马，SWE-bench 80.5%、1M 上下文、极低价格 $0.30/1M。中国 AI 公司新势力的代表。",
+      "full_content": "## 模型概述\n\nMiniMax M3 是 MiniMax（稀宇科技）于 2026 年 6 月发布的开源模型。在 SWE-bench Verified 上达到 80.5%，1M tokens 上下文窗口，以极低价格震惊业界。\n\n## 核心能力\n\n### 开源黑马\n发布仅一周即在 SWE-bench 上达到 80.5%，超过 Qwen 3.7 等老牌开源模型。100万上下文支持大规模文档处理。\n\n### 极致性价比\nAPI 价格 $0.30/1M input, $1.20/1M output，是开闭源模型中的价格洼地。适合大规模部署。\n\n## 价格\n- 开源免费\n- API: $0.30/1M input, $1.20/1M output",
+      "pricing": "开源免费 · API $0.30/1M in",
+      "url": "https://minimax.io"
+    },
+    {
+      "id": "qwen-37-max",
+      "name": "通义千问 3.7 Max (Qwen 3.7)",
+      "developer": "阿里云",
+      "type": "开源/商业",
+      "release": "2026-06",
+      "scores": {
+        "overall": 90.8,
+        "coding": 89.5,
+        "reasoning": 89.8,
+        "chinese": 93.2
+      },
+      "trend": "up",
+      "summary": "阿里开源推理之王，SWE-bench 80.4%。开源+商业双轨，中文和电商场景表现突出。",
+      "full_content": "## 模型概述\n\n通义千问 3.7 Max 是阿里云 2026 年 6 月发布的最新开源旗舰。在 SWE-bench 上达到 80.4%，是开源模型推理能力的第一梯队。\n\n## 核心能力\n\n### 开源推理\n在中文推理和逻辑分析上表现顶级。72B 开源版在 HuggingFace 下载量全球前三。\n\n### 阿里生态\n深度集成钉钉、阿里云、淘宝天猫，在电商、物流、金融等垂直领域有定制优化。\n\n## 价格\n- 开源版: 免费\n- API: $0.50/1M tokens",
+      "pricing": "开源免费 · API $0.50/1M",
+      "url": "https://tongyi.aliyun.com"
+    },
+    {
+      "id": "claude-sonnet-46",
+      "name": "Claude Sonnet 4.6",
+      "developer": "Anthropic",
+      "type": "商业闭源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 90.5,
+        "coding": 91.8,
+        "reasoning": 89.5,
+        "chinese": 86.2
+      },
+      "trend": "up",
+      "summary": "Anthropic 中端主力，编程能力接近 Opus 4.8。性价比最高的日常编程模型，Claude Pro 默认模型。",
+      "full_content": "## 模型概述\n\nClaude Sonnet 4.6 是 Anthropic 与 Opus 4.8 一同发布的中端模型。定位为日常开发的主力工具，编程能力接近 Opus 但成本显著更低。\n\n## 核心能力\n\n### 编程能力\n在 HumanEval 和日常编码任务上体验接近 Opus 4.8。仅在极其复杂的重构任务上有所差距。\n\n### 性价比\nPro 用户（$18/月）的默认模型，在速度和质量之间取得最佳平衡。\n\n## 价格\n- Pro: $18/月\n- API: $3/1M input, $10/1M output",
+      "pricing": "Pro $18/月 · API $3/1M in",
+      "url": "https://anthropic.com/claude"
+    },
+    {
+      "id": "kimi-k27",
+      "name": "Kimi K2.7",
+      "developer": "月之暗面",
+      "type": "商业闭源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 89.8,
+        "coding": 87.5,
+        "reasoning": 88.9,
+        "chinese": 94.1
+      },
+      "trend": "up",
+      "summary": "月之暗面旗舰，中文长文本处理标杆。K2.7-code 专为编程优化，国内用户口碑极佳。",
+      "full_content": "## 模型概述\n\nKimi K2.7 是月之暗面（Moonshot AI）于 2026 年 6 月发布的旗舰模型。以超长上下文和深度中文理解著称，在国内 AI 助手中用户粘性最高。\n\n## 核心能力\n\n### 长文本标杆\n支持 1M+ tokens 上下文，在长文档分析、合同审查、论文阅读等场景表现最佳。\n\n### 编程优化\nK2.7-code 版本专为编程场景优化，中文技术问答和代码生成质量高。\n\n## 价格\n- Kimi App: 免费\n- API: ¥1.0/1M tokens",
+      "pricing": "免费 · API ¥1.0/1M tokens",
+      "url": "https://kimi.moonshot.cn"
+    },
+    {
+      "id": "gpt-55-turbo",
+      "name": "GPT-5.5 Turbo",
+      "developer": "OpenAI",
+      "type": "商业闭源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 89.2,
+        "coding": 85.8,
+        "reasoning": 88.5,
+        "chinese": 83.8
+      },
+      "trend": "stable",
+      "summary": "GPT-5.5 高效版，速度更快、成本更低。适合需要 OpenAI 生态但预算敏感的场景。",
+      "full_content": "## 模型概述\n\nGPT-5.5 Turbo 是 GPT-5.5 的轻量高效版本，通过模型蒸馏技术大幅降低成本。\n\n## 核心能力\n\n### 速度与成本\n推理速度比 GPT-5.5 快约 40%，API 价格降低 60%。\n\n### 适用场景\n客服对话、内容审核、大规模数据处理、嵌入式 AI 功能。\n\n## 价格\n- API: $0.80/1M input, $3/1M output",
+      "pricing": "API $0.80/1M in",
+      "url": "https://openai.com"
+    },
+    {
+      "id": "glm-51",
+      "name": "智谱 GLM-5.1",
+      "developer": "智谱AI",
+      "type": "商业闭源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 88.5,
+        "coding": 86.8,
+        "reasoning": 87.2,
+        "chinese": 92.3
+      },
+      "trend": "up",
+      "summary": "清华系AI公司出品，开源编程模型第一梯队。知识图谱增强推理是独特技术路线。",
+      "full_content": "## 模型概述\n\nGLM-5.1 是智谱AI（清华系）于 2026 年 6 月发布的最新版本。在开源编程模型中位列第一梯队，知识图谱增强推理是其独特优势。\n\n## 核心能力\n\n### 知识增强\nGLM 系列独有的知识图谱增强推理技术，在需要事实核查和结构化知识的任务上表现优异。\n\n### 多模态\n支持文本 + 图像的联合理解与生成，在图表分析和文档理解上表现良好。\n\n## 价格\n- 智谱开放平台: $0.20/1M tokens\n- 开源版本: GLM-5.1-9B 可本地运行",
+      "pricing": "API $0.20/1M · 9B 开源免费",
+      "url": "https://zhipuai.cn"
+    },
+    {
+      "id": "deepseek-v41",
+      "name": "DeepSeek V4.1",
+      "developer": "DeepSeek",
+      "type": "开源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 88.2,
+        "coding": 86.5,
+        "reasoning": 87.8,
+        "chinese": 93.5
+      },
+      "trend": "up",
+      "summary": "DeepSeek V4 升级版，编程能力匹敌 GPT-5.5。MIT 协议开源，国产 GPU 兼容。",
+      "full_content": "## 模型概述\n\nDeepSeek V4.1 是 DeepSeek V4 系列的快速迭代版本，在编程能力上匹敌 GPT-5.5，继续保持全面开源和极低价格的策略。\n\n## 核心能力\n\n### 编程提升\n相比 V4，编程能力大幅提升。在与 GPT-5.5 的编程对比中多个基准持平。\n\n### 国产 GPU 兼容\n支持华为昇腾等国产芯片部署，降低了对英伟达的依赖。\n\n## 价格\n- 开源免费\n- API: $0.30/1M tokens",
+      "pricing": "开源免费 · API $0.30/1M",
+      "url": "https://deepseek.com"
+    },
+    {
+      "id": "llama-4-405b",
+      "name": "Llama 4 405B",
+      "developer": "Meta",
+      "type": "开源",
+      "release": "2026-04",
+      "scores": {
+        "overall": 87.8,
+        "coding": 84.5,
+        "reasoning": 87.1,
+        "chinese": 78.5
+      },
+      "trend": "stable",
+      "summary": "Meta 最强开源模型，社区生态最活跃。衍生项目和微调版本极其丰富，开源 AI 的事实标准。",
+      "full_content": "## 模型概述\n\nLlama 4 405B 是 Meta 开源系列的最新旗舰。虽然单点能力不一定最强，但凭借庞大的社区生态和丰富的微调版本，成为开源 AI 的基石。\n\n## 核心能力\n\n### 生态优势\n拥有最活跃的开源社区——数千个微调版本、数十万衍生项目。很多新技术首先在 Llama 生态中看到原型。\n\n### 多语言\n在 30+ 种语言上表现良好，是多语言开源模型的标杆。\n\n## 价格\n- 开源免费（需自行部署，推荐 8×H100）\n- Groq/Replicate 等托管: $0.8/1M tokens",
+      "pricing": "开源免费 · 托管 $0.8/1M",
+      "url": "https://llama.meta.com"
+    },
+    {
+      "id": "gemini-35-flash",
+      "name": "Gemini 3.5 Flash",
+      "developer": "Google DeepMind",
+      "type": "商业闭源",
+      "release": "2026-05",
+      "scores": {
+        "overall": 87.5,
+        "coding": 84.8,
+        "reasoning": 86.1,
+        "chinese": 80.2
+      },
+      "trend": "stable",
+      "summary": "Gemini 高效版本，速度极快、成本极低。适合实时交互和高并发生产部署。",
+      "full_content": "## 模型概述\n\nGemini 3.5 Flash 是 Gemini 系列的高效版本。推理速度比 Pro 快 3 倍，成本约为 1/10。\n\n## 核心能力\n\n### 极速推理\n平均首 token 延迟 <200ms，适合实时对话、代码补全等低延迟场景。\n\n### 成本极低\nAPI 价格极低，适合大规模部署和高频调用。免费层慷慨。\n\n## 价格\n- API: $0.15/1M input tokens\n- 免费层可用",
+      "pricing": "API $0.15/1M · 免费层可用",
+      "url": "https://deepmind.google"
+    },
+    {
+      "id": "doubao-pro",
+      "name": "豆包 Pro (Doubao)",
+      "developer": "字节跳动",
+      "type": "商业闭源",
+      "release": "2026-06",
+      "scores": {
+        "overall": 87.2,
+        "coding": 82.8,
+        "reasoning": 84.5,
+        "chinese": 93
+      },
+      "trend": "up",
+      "summary": "字节跳动旗舰，国内用户量最大。深度集成飞书和抖音生态，中文对话体验最佳之一。",
+      "full_content": "## 模型概述\n\n豆包 Pro 是字节跳动的大模型产品，通过飞书、抖音、豆包 App 触达最多的国内 C 端用户。2026 年全面开源多个版本。\n\n## 核心能力\n\n### 国内生态整合\n深度集成飞书（智能伙伴）、抖音（AI 搜索、内容创作）、火山引擎（企业 API），是国内 AI 应用生态最完整的模型。\n\n### 中文体验\n中文日常对话、内容创作、文化语境理解表现顶级。对国内用户表达习惯理解最到位。\n\n## 价格\n- 豆包 App: 免费\n- 火山引擎 API: ¥0.8/1M tokens",
+      "pricing": "免费 · API ¥0.8/1M tokens",
+      "url": "https://doubao.com"
+    },
+    {
+      "id": "ernie-50",
+      "name": "文心一言 5.0 (ERNIE 5.0)",
+      "developer": "百度",
+      "type": "商业闭源",
+      "release": "2026-04",
+      "scores": {
+        "overall": 86.5,
+        "coding": 82.1,
+        "reasoning": 84.7,
+        "chinese": 90.3
+      },
+      "trend": "stable",
+      "summary": "百度旗舰，搜索增强+知识图谱加持。中文知识问答和实时信息检索能力突出。",
+      "full_content": "## 模型概述\n\n文心一言 5.0 是百度的最新大模型。背靠百度的搜索引擎和知识图谱，在中文知识问答和信息检索方面有先天优势。\n\n## 核心能力\n\n### 搜索增强\n与百度搜索深度集成，在实时信息检索和知识问答上具有独特优势。RAG 能力内置。\n\n### 百度生态\n集成百度搜索、百度文库、百度地图等，覆盖信息获取完整链路。\n\n## 价格\n- 文心一言 App: 免费\n- API: ¥0.6/1M tokens",
+      "pricing": "免费 · API ¥0.6/1M",
+      "url": "https://yiyan.baidu.com"
+    },
+    {
+      "id": "grok-3",
+      "name": "Grok 3",
+      "developer": "xAI",
+      "type": "商业闭源",
+      "release": "2026-03",
+      "scores": {
+        "overall": 86.2,
+        "coding": 82.5,
+        "reasoning": 85.9,
+        "chinese": 75.2
+      },
+      "trend": "stable",
+      "summary": "Elon Musk 旗下 xAI 出品，实时联网+幽默风格独树一帜。X 平台深度集成。",
+      "full_content": "## 模型概述\n\nGrok 3 是 xAI（Elon Musk 创立）的第三代大模型。以实时联网能力、幽默回复风格和\"不设限\"的内容策略在市场上独树一帜。\n\n## 核心能力\n\n### 实时联网\n通过 X（Twitter）平台获取实时信息，在时事类问题上具有时效性优势。\n\n### 独特风格\n回复风格幽默、直接、不做作，在特定用户群中极受欢迎。\n\n## 价格\n- X Premium+: $16/月\n- API: $5/1M tokens",
+      "pricing": "X Premium+ $16/月 · API $5/1M",
+      "url": "https://x.ai"
+    },
+    {
+      "id": "mistral-large-3",
+      "name": "Mistral Large 3",
+      "developer": "Mistral AI",
+      "type": "商业闭源",
+      "release": "2026-04",
+      "scores": {
+        "overall": 85.8,
+        "coding": 84.3,
+        "reasoning": 84.9,
+        "chinese": 76.8
+      },
+      "trend": "stable",
+      "summary": "欧洲最强 AI 公司出品，多语言能力均衡（尤其欧洲语言）。高效务实，代码和推理扎实。",
+      "full_content": "## 模型概述\n\nMistral Large 3 是法国 AI 公司 Mistral 的旗舰模型。在欧洲市场占据主导地位，以高效、务实、多语言均衡著称。\n\n## 核心能力\n\n### 欧洲语言\n在法语、德语、西班牙语等欧洲语言上表现顶级，是欧洲企业和政府的首选模型。\n\n### 高效架构\nMistral 一直以高效著称——用更少的参数实现接近更大模型的表现。\n\n## 价格\n- Le Chat: 免费\n- API: $4/1M tokens",
+      "pricing": "免费 · API $4/1M",
+      "url": "https://mistral.ai"
+    },
+    {
+      "id": "hunyuan-pro",
+      "name": "混元 Pro (Hunyuan)",
+      "developer": "腾讯",
+      "type": "商业闭源",
+      "release": "2026-05",
+      "scores": {
+        "overall": 85.3,
+        "coding": 81.2,
+        "reasoning": 83.5,
+        "chinese": 90.8
+      },
+      "trend": "up",
+      "summary": "腾讯旗舰，深度集成微信/企微/腾讯云。在企业服务和社交场景有独特优势。",
+      "full_content": "## 模型概述\n\n混元 Pro 是腾讯的大模型产品。通过微信、企业微信、腾讯云等触达海量用户，是国内覆盖用户最多的 AI 模型之一。\n\n## 核心能力\n\n### 社交生态\n通过微信小程序、企业微信等提供服务，用户无需下载额外 App。社交场景的 AI 应用有先天优势。\n\n### 企业服务\n与腾讯云深度绑定，提供从模型训练到部署的全链路服务。\n\n## 价格\n- 微信内: 免费\n- API: ¥0.5/1M tokens",
+      "pricing": "免费 · API ¥0.5/1M",
+      "url": "https://hunyuan.tencent.com"
+    },
+    {
+      "id": "deepseek-v3",
+      "name": "DeepSeek-V3",
+      "developer": "DeepSeek",
+      "type": "开源",
+      "release": "2025-12",
+      "scores": {
+        "overall": 84.8,
+        "coding": 82.7,
+        "reasoning": 84.1,
+        "chinese": 92.3
+      },
+      "trend": "stable",
+      "summary": "V4 的前代版本，社区和生态最成熟。部署方案最丰富，24GB 显存即可运行量化版。",
+      "full_content": "## 模型概述\n\nDeepSeek-V3 是 V4 系列的前代版本，在 2025 年底发布时全球轰动——以极低训练成本达到接近 GPT-4 的性能。社区生态最成熟。\n\n## 核心能力\n\n### 成熟生态\n拥有最丰富的中文开源微调版本和部署方案，文档和社区支持完善。\n\n### 低部署门槛\n量化后可在消费级 GPU 上运行（24GB 显存即可）。\n\n## 价格\n- 开源免费\n- API: ¥0.3/1M tokens",
+      "pricing": "开源免费 · API ¥0.3/1M",
+      "url": "https://deepseek.com"
+    },
+    {
+      "id": "llama-4-70b",
+      "name": "Llama 4 70B",
+      "developer": "Meta",
+      "type": "开源",
+      "release": "2026-04",
+      "scores": {
+        "overall": 83.5,
+        "coding": 81.2,
+        "reasoning": 82.3,
+        "chinese": 76.4
+      },
+      "trend": "stable",
+      "summary": "开源社区的\"甜点尺寸\"——性能强但部署成本可控。单张 A100 即可运行，衍生模型最多。",
+      "full_content": "## 模型概述\n\nLlama 4 70B 是 Meta 的中端开源模型，在性能和可部署性之间取得最佳平衡。单张 A100 80GB 即可运行。\n\n## 核心能力\n\n### 易部署\n70B 参数是开源社区的\"甜点尺寸\"。微调方案极其丰富。\n\n### 社区生态\n衍生模型数量最多的尺寸，几乎所有新微调技术都会首先在 70B 上验证。\n\n## 价格\n- 开源免费\n- 托管: $0.5/1M tokens",
+      "pricing": "开源免费 · 托管 $0.5/1M",
+      "url": "https://llama.meta.com"
+    },
+    {
+      "id": "qwen-30-72b",
+      "name": "Qwen 3.0 72B",
+      "developer": "阿里云",
+      "type": "开源",
+      "release": "2026-05",
+      "scores": {
+        "overall": 82.9,
+        "coding": 80.5,
+        "reasoning": 81.9,
+        "chinese": 90.1
+      },
+      "trend": "stable",
+      "summary": "最受欢迎的中文开源基座之一，HuggingFace 下载量全球前三。国内 AI 创业最常用基座。",
+      "full_content": "## 模型概述\n\nQwen 3.0 72B 是阿里云通义千问的开源版本。在 HuggingFace 上中文模型下载量排名前三，是国内 AI 创业公司最常用的基座模型之一。\n\n## 核心能力\n\n### 中文优化\n中文理解、生成、文化语境处理出色。中文文档和社区支持完善。\n\n### 工具使用\n原生支持 Function Calling 和 Agent 框架，适合构建 AI 应用。\n\n## 价格\n- 开源免费\n- 阿里云 API: ¥0.5/1M tokens",
+      "pricing": "开源免费 · API ¥0.5/1M",
+      "url": "https://tongyi.aliyun.com"
+    },
+    {
+      "id": "yi-lightning",
+      "name": "Yi-Lightning",
+      "developer": "零一万物",
+      "type": "开源/商业",
+      "release": "2026-03",
+      "scores": {
+        "overall": 82.3,
+        "coding": 79.2,
+        "reasoning": 81.1,
+        "chinese": 88.7
+      },
+      "trend": "stable",
+      "summary": "李开复创办的零一万物出品，推理速度极快、成本极低。专注中小尺寸模型高效推理。",
+      "full_content": "## 模型概述\n\nYi-Lightning 是零一万物推出的高效推理模型，主打\"闪电般的推理速度\"和极低的部署成本。\n\n## 核心能力\n\n### 极致速度\n在消费级 GPU 上即可实现高速推理，适合实时 AI 应用场景。\n\n### 低部署成本\n模型尺寸精简，可在移动设备和边缘设备上运行。\n\n## 价格\n- 开源免费\n- API: ¥0.3/1M tokens",
+      "pricing": "开源免费 · API ¥0.3/1M",
+      "url": "https://01.ai"
+    },
+    {
+      "id": "phi-4",
+      "name": "Phi-4",
+      "developer": "Microsoft",
+      "type": "开源",
+      "release": "2026-03",
+      "scores": {
+        "overall": 81.8,
+        "coding": 78.5,
+        "reasoning": 82.5,
+        "chinese": 74.2
+      },
+      "trend": "stable",
+      "summary": "微软小模型最新版。教科书级数据训练，14B 参数接近 70B 推理能力。端侧部署标杆。",
+      "full_content": "## 模型概述\n\nPhi-4 是微软\"小模型大能力\"系列最新版。通过在高质量\"教科书级\"数据上训练，14B 参数在推理能力上接近 70B 级别。\n\n## 核心能力\n\n### 数据质量驱动\nPhi 系列的核心哲学是\"数据质量 > 数据数量\"。精选高质量文本训练。\n\n### 端侧推理\n14B 参数可在移动设备和 IoT 设备上高效运行。\n\n## 价格\n- 开源免费\n- Azure: 极低价格",
+      "pricing": "开源免费 · Azure 托管",
+      "url": "https://azure.microsoft.com"
+    },
+    {
+      "id": "gemma-3",
+      "name": "Gemma 3",
+      "developer": "Google",
+      "type": "开源",
+      "release": "2026-04",
+      "scores": {
+        "overall": 81.2,
+        "coding": 77.8,
+        "reasoning": 80.3,
+        "chinese": 73.5
+      },
+      "trend": "stable",
+      "summary": "Google 开源模型系列。基于 Gemini 技术，2B/7B/27B 多尺寸可选，研究友好。",
+      "full_content": "## 模型概述\n\nGemma 3 是 Google 基于 Gemini 技术打造的开源模型系列。提供 2B、7B、27B 三个尺寸，覆盖从手机到服务器的各种部署场景。\n\n## 核心能力\n\n### 多尺寸可选\n从 2B（手机可跑）到 27B（服务器部署），覆盖面广。\n\n### 研究友好\nGoogle 提供完整训练 Recipe 和评估工具，适合学术研究。\n\n## 价格\n- 开源免费",
+      "pricing": "开源免费",
+      "url": "https://ai.google.dev/gemma"
+    },
+    {
+      "id": "command-r-plus",
+      "name": "Command R+",
+      "developer": "Cohere",
+      "type": "商业闭源",
+      "release": "2026-02",
+      "scores": {
+        "overall": 80.7,
+        "coding": 76.4,
+        "reasoning": 79.8,
+        "chinese": 72.1
+      },
+      "trend": "stable",
+      "summary": "Cohere 旗舰，企业级 RAG 和检索最强。金融、法律、医疗等垂直领域广泛使用。",
+      "full_content": "## 模型概述\n\nCommand R+ 是 Cohere 的旗舰企业级模型。专注企业市场，在 RAG、检索、文档处理方面做得最深。\n\n## 核心能力\n\n### 企业 RAG\n原生内置 RAG 能力，不需要额外构建检索管道。文档问答、知识库搜索、合同分析表现最佳。\n\n### 多语言企业文档\n在金融、法律、医疗等垂直领域的专业文档处理上积累深厚。\n\n## 价格\n- API: $3/1M tokens",
+      "pricing": "API $3/1M",
+      "url": "https://cohere.com"
+    },
+    {
+      "id": "internlm3",
+      "name": "InternLM3",
+      "developer": "上海AI实验室",
+      "type": "开源",
+      "release": "2026-03",
+      "scores": {
+        "overall": 80.1,
+        "coding": 76.8,
+        "reasoning": 79.2,
+        "chinese": 87.5
+      },
+      "trend": "stable",
+      "summary": "上海AI实验室出品。学术风格浓厚，中文长文本和科学文献分析表现优异。",
+      "full_content": "## 模型概述\n\nInternLM3 是上海人工智能实验室推出的大模型。学术背景深厚，在科学文献分析、长文本理解等场景有独特优势。\n\n## 核心能力\n\n### 长文本处理\n在超长文本（100K+ tokens）的理解和摘要上表现突出。\n\n### 学术文献\n科学论文分析、学术写作辅助等场景有专门优化。\n\n## 价格\n- 开源免费",
+      "pricing": "开源免费",
+      "url": "https://internlm.org"
+    },
+    {
+      "id": "minicpm-4",
+      "name": "MiniCPM-4",
+      "developer": "面壁智能",
+      "type": "开源",
+      "release": "2026-04",
+      "scores": {
+        "overall": 79.3,
+        "coding": 75.1,
+        "reasoning": 77.8,
+        "chinese": 86.2
+      },
+      "trend": "stable",
+      "summary": "面壁智能出品，专注端侧小模型。手机和 IoT 设备上流畅运行，中文能力扎实。",
+      "full_content": "## 模型概述\n\nMiniCPM-4 是面壁智能推出的端侧小模型。专注\"小而美\"路线，在手机、智能家居等设备上流畅运行。\n\n## 核心能力\n\n### 端侧部署\n针对移动设备极致优化，可在 iPhone、Android 手机上实时推理。\n\n### 中文优化\n端侧模型中，中文能力最强。\n\n## 价格\n- 开源免费（端侧运行）",
+      "pricing": "开源免费",
+      "url": "https://minicpm.org"
+    },
+    {
+      "id": "mistral-small",
+      "name": "Mistral Small 3",
+      "developer": "Mistral AI",
+      "type": "开源",
+      "release": "2026-04",
+      "scores": {
+        "overall": 78.5,
+        "coding": 75.1,
+        "reasoning": 76.8,
+        "chinese": 72.2
+      },
+      "trend": "stable",
+      "summary": "Mistral 轻量级开源模型。低延迟、低功耗，适合边缘部署和移动端应用。",
+      "full_content": "## 模型概述\n\nMistral Small 3 是 Mistral 的轻量开源模型。专注低延迟和低功耗场景，在边缘设备和移动端应用中有独特价值。\n\n## 核心能力\n\n### 轻量高效\n极小的模型体积实现不错的通用能力，在边缘场景中竞争力强。\n\n## 价格\n- 开源免费",
+      "pricing": "开源免费",
+      "url": "https://mistral.ai"
+    },
+    {
+      "id": "baichuan-4",
+      "name": "百川 4 (Baichuan 4)",
+      "developer": "百川智能",
+      "type": "商业闭源",
+      "release": "2026-04",
+      "scores": {
+        "overall": 78.2,
+        "coding": 74.5,
+        "reasoning": 76.9,
+        "chinese": 85.8
+      },
+      "trend": "stable",
+      "summary": "王小川创立。医疗和政务领域有深厚积累，垂直场景超越通用大模型。",
+      "full_content": "## 模型概述\n\n百川智能由搜狗创始人王小川创立，专注大模型在医疗、政务等垂直领域的应用。\n\n## 核心能力\n\n### 医疗垂直\n在医疗问诊、病历分析、药物知识等方面做了大量定向优化，准确率高于通用模型。\n\n### 政务应用\n政务服务、政策解读等场景有成熟方案。\n\n## 价格\n- API: ¥0.5/1M tokens",
+      "pricing": "API ¥0.5/1M",
+      "url": "https://baichuan-ai.com"
+    }
+  ]
+}

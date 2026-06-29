@@ -1,0 +1,18 @@
+{
+  "name": "ai-learning-agent",
+  "version": "1.0.0",
+  "description": "AI学习助手 - AI早报、AI工具、AI模型、AI咨询",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "generate": "node scripts/generate-report.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-schedule": "^2.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
