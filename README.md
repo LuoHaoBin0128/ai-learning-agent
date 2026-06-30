@@ -3,6 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/status-live-success?style=for-the-badge" alt="Status" />
   <img src="https://img.shields.io/badge/express-4.x-blue?style=for-the-badge&logo=express" alt="Express" />
+  <img src="https://img.shields.io/badge/deepseek-api-4B6BFB?style=for-the-badge" alt="DeepSeek" />
   <img src="https://img.shields.io/badge/node-18+-green?style=for-the-badge&logo=node.js" alt="Node.js" />
   <img src="https://img.shields.io/badge/license-MIT-brightgreen?style=for-the-badge" alt="License" />
   <img src="https://img.shields.io/badge/PRs-welcome-blueviolet?style=for-the-badge" alt="PRs Welcome" />
@@ -84,7 +85,7 @@ Every morning, AI practitioners spend **30–60 minutes** scanning Twitter, Redd
 ### Installation
 
 ```bash
-git clone https://github.com/luohaobin/ai-learning-agent.git
+git clone https://github.com/LuoHaoBin0128/ai-learning-agent.git
 cd ai-learning-agent
 npm install
 echo "your-deepseek-api-key" > .deepseek-key
@@ -181,17 +182,17 @@ Please open an issue first to discuss what you would like to change.
 
 ## Star History
 
-<a href="https://star-history.com/#luohaobin/ai-learning-agent&Date">
+<a href="https://star-history.com/#LuoHaoBin0128/ai-learning-agent&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=luohaobin/ai-learning-agent&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=luohaobin/ai-learning-agent&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=luohaobin/ai-learning-agent&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=LuoHaoBin0128/ai-learning-agent&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=LuoHaoBin0128/ai-learning-agent&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=LuoHaoBin0128/ai-learning-agent&type=Date" />
   </picture>
 </a>
 
 ## License
 
-MIT © [luohaobin](https://github.com/luohaobin)
+MIT © [LuoHaoBin0128](https://github.com/LuoHaoBin0128)
 
 ---
 
