@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1.0'>
+<title>GitHub 认证引导</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f0f0f;color:#e0e0e0;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px}
+.card{background:#1a1a2e;border-radius:12px;padding:32px;max-width:520px;width:100%}
+h1{font-size:20px;color:#fff;margin-bottom:8px}
+.sub{color:#8e8e93;font-size:13px;margin-bottom:24px}
+.step{background:#252540;border-radius:8px;padding:16px;margin-bottom:12px}
+.step-num{background:#3B82F6;color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-right:8px}
+.step-title{font-size:14px;color:#fff;font-weight:600}
+.step-body{font-size:13px;color:#bbb;margin-top:6px;margin-left:32px}
+code{background:#0f0f0f;color:#60a5fa;padding:2px 6px;border-radius:4px;font-size:12px}
+.btn{display:block;margin:20px auto 0;padding:10px 28px;background:#3B82F6;color:#fff;border:none;border-radius:8px;font-size:14px;cursor:pointer;text-decoration:none;text-align:center}
+.btn:hover{background:#2563EB}
+.done{color:#22c55e}
+.pending{color:#f59e0b}
+</style>
+</head>
+<body>
+<div class='card'>
+<h1>GitHub 上传状态</h1>
+<div class='sub'>AI Learning Assistant · 自动推送监控已就绪</div>
+
+<div class='step'>
+<span class='step-num'>1</span><span class='step-title done'>代码仓库已就绪 ✓</span>
+<div class='step-body'>15 个文件 · 8,573 行代码 · 已提交</div>
+</div>
+
+<div class='step'>
+<span class='step-num'>2</span><span class='step-title done'>README + LICENSE ✓</span>
+<div class='step-body'>中英文双语 README · MIT License</div>
+</div>
+
+<div class='step'>
+<span class='step-num'>3</span><span class='step-title done'>公共克隆已可用 ✓</span>
+<div class='step-body'><code>git clone https://ai.foodrs.top/git-repos/ai-learning-agent.git</code></div>
+</div>
+
+<div class='step'>
+<span class='step-num'>4</span><span class='step-title pending'>GitHub 推送等待中...</span>
+<div class='step-body'>服务器每 30 分钟自动检测，一旦 GitHub 认证就绪立即自动推送</div>
+</div>
+
+<div class='step'>
+<span class='step-num'>?</span><span class='step-title'>手动完成 GitHub 认证</span>
+<div class='step-body'>如果你现在可以访问 GitHub，<a href='/gh/login/device' style='color:#60a5fa'>点此通过代理认证</a></div>
+</div>
+</div>
+</body>
+</html>

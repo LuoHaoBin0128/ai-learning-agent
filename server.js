@@ -362,3 +362,24 @@ app.put('/api/certification/:id', (req, res) => {
 app.listen(PORT, () => {
   console.log(`AI学习助手已启动: http://localhost:${PORT}`);
 });
+
+// GitHub OAuth 代理（用于设备授权流程）
+app.use('/gh', (req, res) => {
+  const http = require('http');
+  const targetPath = req.url;
+  const options = {
+    hostname: '127.0.0.1',
+    port: 9998,
+    path: '/gh' + targetPath,
+    method: req.method,
+    headers: { ...req.headers, host: 'github.com' },
+  };
+  const proxy = http.request(options, (proxyRes) => {
+    const headers = { ...proxyRes.headers };
+    // let proxy handle cookie rewriting
+    res.writeHead(proxyRes.statusCode, headers);
+    proxyRes.pipe(res);
+  });
+  proxy.on('error', () => { res.writeHead(502); res.end('error'); });
+  req.pipe(proxy);
+});
